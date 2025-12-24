@@ -452,11 +452,31 @@ n = 2(z_α/2 + z_β)² × (σ²/δ²)
 
 ---
 
+## 📚 Complete Guide List
+
+**All guides in this module:**
+
+1. **[Probability Distributions](./probability_distributions.md)** - Master Normal, Binomial, Poisson, and Exponential distributions
+2. **[Hypothesis Testing](./hypothesis_testing.md)** - Framework for data-driven decisions with t-tests and p-values
+3. **[Confidence Intervals](./confidence_intervals.md)** - Quantify uncertainty in estimates with bootstrap methods
+4. **[P-Value Complete Guide](./p_value_complete_guide.md)** - Deep technical dive into statistical significance and Type I/II errors
+5. **[ANOVA](./anova.md)** - Compare means across multiple groups with analysis of variance
+6. **[Chi-Square Tests](./chi_square.md)** - Test relationships between categorical variables
+7. **[Correlation Analysis](./correlation_analysis.md)** - Measure relationships between variables (Pearson, Spearman)
+8. **[Power Analysis](./power_analysis.md)** - Calculate sample sizes and design robust experiments
+
+**Bonus Resources:**
+- **[Statistical Tasks Guide](./DATA_SCIENTIST_STATISTICAL_TASKS.md)** - Real-world applications of statistics in data science
+- **[Quick Reference Cheatsheet](./CHEATSHEET.md)** - Essential formulas and test selection guide
+- **[Module Summary](./MODULE_SUMMARY.md)** - Overview of all statistical concepts covered
+
+---
+
 <div align="center">
 
 **Master Statistics, Master Inference** 📊
 
-*Every data-driven decision needs statistical rigor*
+*8 core guides + 3 resources • Every data-driven decision needs statistical rigor*
 
 [⬅️ Previous: EDA](../01_eda/) • [🏠 Home](../../README.md) • [➡️ Next: Supervised ML](../03_supervised_ml/)
 

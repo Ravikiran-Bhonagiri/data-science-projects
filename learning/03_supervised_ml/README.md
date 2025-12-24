@@ -159,9 +159,28 @@ print(classification_report(y_test, predictions))
 
 ---
 
+## 📚 Complete Guide List
+
+**All guides in this module:**
+
+1. **[Linear Regression](./01_linear_regression.md)** - Predict continuous values and understand coefficient interpretation
+2. **[Logistic Regression](./02_logistic_regression.md)** - Binary classification with probability outputs
+3. **[Decision Trees](./03_decision_trees.md)** - Interpretable "20 Questions" logic for predictions
+4. **[Ensemble Bagging / Random Forest](./04_ensemble_bagging.md)** - Wisdom of crowds for robust predictions
+5. **[Ensemble Boosting / XGBoost/ LightGBM](./05_ensemble_boosting.md)** - State-of-the-art gradient boosting for highest accuracy
+6. **[Support Vector Machines](./06_support_vector_machines.md)** - Handle high-dimensional, small datasets effectively  
+7. **[K-Nearest Neighbors (KNN)](./07_knn_algorithms.md)** - Instance-based learning for recommendations and anomaly detection
+8. **[Naive Bayes](./08_naive_bayes.md)** - Fast baseline for text classification and NLP
+9. **[Model Calibration](./09_model_calibration.md)** - Make probability predictions trustworthy
+10. **[Hyperparameter Tuning](./10_hyperparameter_tuning.md)** - Automate optimization with Optuna and grid search
+
+---
+
 <div align="center">
 
 **Master Prediction, Master Data Science** 🤖
+
+*10 comprehensive guides • From Linear Regression to XGBoost*
 
 [⬅️ Statistics](../02_statistics/) • [🏠 Home](../../README.md) • [➡️ Unsupervised ML](../04_unsupervised_ml/)
 

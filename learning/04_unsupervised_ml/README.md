@@ -217,11 +217,29 @@ plt.scatter(X_2d[:, 0], X_2d[:, 1], c=labels, cmap='viridis')
 
 ---
 
+## 📚 Complete Guide List
+
+**All guides in this module:**
+
+1. **[K-Means Clustering](./01_kmeans_clustering.md)** - Master centroid-based clustering for customer segmentation and image compression
+2. **[Hierarchical Clustering](./02_hierarchical_clustering.md)** - Build dendrograms and understand agglomerative clustering for taxonomy
+3. **[DBSCAN & Isolation Forest](./03_dbscan_isolation_forest.md)** - Discover arbitrary-shaped clusters and detect outliers with density-based methods
+4. **[HDBSCAN Advanced](./03_b_hdbscan_advanced.md)** - Handle variable-density clusters with hierarchical DBSCAN
+5. **[PCA Dimensionality Reduction](./04_pca_dimensionality_reduction.md)** - Reduce dimensions while preserving variance using Principal Component Analysis
+6. **[t-SNE & UMAP](./05_t_sne_umap.md)** - Create beautiful 2D visualizations of high-dimensional data
+7. **[Gaussian Mixture Models](./06_gaussian_mixture_models.md)** - Probabilistic clustering with soft assignments and density estimation
+8. **[Association Rules](./07_association_rules.md)** - Discover frequent itemsets and rules for market basket analysis
+9. **[Cluster Validation Metrics](./08_cluster_validation_metrics.md)** - Evaluate clustering quality with silhouette scores and other metrics
+10. **[Topic Modeling (LDA/NMF)](./09_topic_modeling_lda_nmf.md)** - Extract hidden topics from text using Latent Dirichlet Allocation and NMF
+11. **[Neural Unsupervised (Autoencoders)](./10_neural_unsupervised_autoencoders.md)** - Learn compressed representations with neural network autoencoders
+
+---
+
 <div align="center">
 
 **Master Unsupervised Learning** 🔮
 
-*8 comprehensive guides • Clustering + Dimensionality Reduction*
+*11 comprehensive guides • Clustering + Dimensionality Reduction*
 
 [⬅️ Supervised ML](../03_supervised_ml/) • [🏠 Home](../../README.md) • [➡️ Model Evaluation](../05_evaluation/)
 

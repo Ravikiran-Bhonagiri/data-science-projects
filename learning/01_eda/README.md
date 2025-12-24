@@ -332,11 +332,29 @@ Advanced (Week 5-6)
 
 ---
 
+## 📚 Complete Guide List
+
+**All guides in this module:**
+
+1. **[Data Types](./01_data_types.md)** - Understand numerical vs categorical data and encoding strategies
+2. **[Missing Data](./02_missing_data.md)** - Handle MCAR, MAR, MNAR patterns with simple to advanced imputation
+3. **[Outlier Detection](./03_outlier_detection.md)** - Detect and handle outliers using Z-Score, IQR, and Isolation Forest
+4. **[Data Visualization](./04_visualization.md)** - Master univariate, bivariate, and multivariate plotting techniques
+5. **[EDA Workflow](./05_eda_workflow.md)** - Follow a step-by-step checklist for consistent analysis
+6. **[Regression vs Classification EDA](./06_regression_vs_classification.md)** - Tailor your analysis approach to your modeling goal
+7. **[Handling Class Imbalance](./07_handling_class_imbalance.md)** - Detect and address imbalanced datasets
+8. **[Automated EDA](./08_automated_eda.md)** - Use tools like pandas-profiling and sweetviz for quick insights
+9. **[Feature Engineering from EDA](./09_feature_engineering_from_eda.md)** - Transform EDA insights into engineered features
+10. **[Advanced EDA Techniques](./10_advanced_eda_techniques.md)** - Apply advanced methods for complex data
+11. **[Corner Cases](./11_corner_cases.md)** - Handle edge cases and unusual data scenarios
+
+---
+
 <div align="center">
 
 **Master EDA, Master Data Science** 🎯
 
-*Every great model starts with great EDA*
+*11 comprehensive guides • Every great model starts with great EDA*
 
 [⬅️ Back to Main](../../README.md) • [➡️ Next Module: Statistics](../02_statistics/)
 
