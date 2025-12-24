@@ -1,46 +1,276 @@
-# Module 5: Model Evaluation & Storytelling
+<div align="center">
 
-**Building a model is only 20% of the work.**
-The remaining 80% is evaluating if it works, understanding where it fails, and explaining it to someone who signs the checks.
+# ⚖️ Module 5: Model Evaluation & Metrics
 
-Most Data Scientists stop at "Accuracy = 90%".
-**Grandmasters** ask: "Is 90% good? What is the cost of the 10% error? And does this actually make money?"
+### *Measuring What Matters*
 
----
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen?style=flat-square)
+![Difficulty](https://img.shields.io/badge/Difficulty-Intermediate-yellow?style=flat-square)
+![Topics](https://img.shields.io/badge/Topics-9-orange?style=flat-square)
 
-## 📚 The Grandmaster Series
+**Master the art of assessing model performance beyond accuracy**
 
-### Phase 1: The Trade-offs (Theory)
-*Understanding the balance of the universe.*
-1.  **[Bias vs Variance](./01_bias_variance_tradeoff.md):** The "Goldilocks Problem". Overfitting vs Underfitting.
-2.  **[Precision vs Recall](./02_precision_recall_tradeoff.md):** The "Spam Filter Dilemma". Tuning the decision threshold.
+[📊 Classification](#-classification-metrics) • [📏 Regression](#-regression-metrics) • [🔄 Validation](#-cross-validation)
 
-### Phase 2: The Scorecards (Metrics)
-*How to keep score properly.*
-3.  **[Classification Metrics](./03_classification_metrics.md):** Beyond Accuracy. F1, Kappa, Log-Loss.
-4.  **[Regression Metrics](./04_regression_metrics.md):** The Price is Right. MAE vs RMSE vs RMSLE.
-
-### Phase 3: The Reality Check (Technique)
-*Testing yourself rigorously.*
-5.  **[Cross-Validation Strategies](./05_cross_validation_strategies.md):** The "Exam". Stratified, GroupKFold, and TimeSeriesSplit.
-
-### Phase 4: The Impact (Business)
-*The most important file in this entire portfolio.*
-6.  **[Business Value Analysis](./06_business_value_analysis.md):** "The CEO's Language". Calculating ROI, Profit Curves, and Lift.
-
-### Phase 5: Advanced Topics
-7.  **[Handling Class Imbalance](./07_class_imbalance.md):** SMOTE, Class Weights, and Resampling for fraud/disease detection.
-8.  **[Model Calibration](./08_model_calibration.md):** When your 90% prediction actually means 50%. Platt scaling and temperature scaling.
+</div>
 
 ---
 
-## 🧠 Quick Reference: Which Metric?
+## 💡 Why Evaluation Matters
 
-| Problem Type | Scenario | Metric | Why? |
-|---|---|---|---|
-| **Classification** | Balanced Data (50/50) | Accuracy / AUC | Simple proxy for quality. |
-| **Classification** | Imbalanced (Fraud / Cancer) | **PR-AUC / F1** | Accuracy is a lie. |
-| **Classification** | Probability Matters (Betting) | **Log-Loss** | Punishes false confidence. |
-| **Regression** | Cost of Error is Linear | **MAE** | Robust to outliers. |
-| **Regression** | Large Errors are Fatal | **RMSE** | Squares errors to punish misses. |
-| **Business** | Optimization | **Total Profit** | Evaluate using the `Profit Cost Matrix`. |
+> **"Accuracy is not enough. Choose the right metric for your problem."**
+
+**Reality check:**
+- 95% accuracy on fraud detection = USELESS if you miss all frauds
+- Lower RMSE doesn't mean better business value
+- Cross-validation prevents overfitting disasters
+
+---
+
+## 📊 Classification Metrics
+
+**For binary and multi-class problems**
+
+<table>
+<tr>
+<td width="50%">
+
+### Core Metrics
+
+**Accuracy**
+```
+(TP + TN) / Total
+```
+⚠️ Misleading with imbalanced classes
+
+**Precision**
+```
+TP / (TP + FP)
+```
+✅ "Of predicted positives, how many correct?"
+
+**Recall (Sensitivity)**
+```
+TP / (TP + FN)
+```
+✅ "Of actual positives, how many caught?"
+
+**F1-Score**  
+```
+2 × (Precision × Recall) / (Precision + Recall)
+```
+✅ Harmonic mean, balances both
+
+</td>
+<td width="50%">
+
+### Advanced Metrics
+
+**ROC-AUC**
+- Area under ROC curve
+- Threshold-independent
+- Good for class imbalance
+
+**Precision-Recall AUC**
+- Better than ROC for severe imbalance
+- Focuses on positive class
+
+**Cohen's Kappa**
+- Accounts for chance agreement
+- For multi-class
+
+**Matthews Correlation Coefficient**
+- Balanced even with imbalance
+- Range: -1 to +1
+
+</td>
+</tr>
+</table>
+
+---
+
+## 📏 Regression Metrics
+
+**For continuous predictions**
+
+| Metric | Formula | When to Use |
+|--------|---------|-------------|
+| **MAE** | `Σ\|y - ŷ\| / n` | Same unit as target, interpretable |
+| **MSE** | `Σ(y - ŷ)² / n` | Penalizes large errors more |
+| **RMSE** | `√MSE` | Same units, more sensitive |
+| **R²** | `1 - SS_res/SS_tot` | % variance explained (0-1) |
+| **Adjusted R²** | Penalized R² | Accounts for # features |
+| **MAPE** | `Σ\|y - ŷ\|/y × 100` | Percentage error |
+
+---
+
+## 🔄 Cross-Validation
+
+**Ensure generalization**
+
+<table>
+<tr>
+<td width="50%">
+
+### Standard Methods
+
+**K-Fold CV**
+```python
+from sklearn.model_selection import cross_val_score
+scores = cross_val_score(model, X, y, cv=5)
+print(f"Mean: {scores.mean():.3f} ±{scores.std():.3f}")
+```
+
+**Stratified K-Fold**
+- Preserves class distribution
+- Critical for imbalanced data
+
+**Leave-One-Out (LOO)**
+- K = n (each sample is test once)
+- Expensive but thorough
+
+</td>
+<td width="50%">
+
+### Specialized Methods
+
+**Time Series CV**
+- No random splits
+- Respects temporal order
+- Expanding/sliding window
+
+**Group K-Fold**
+- Keep groups together
+- Patient data, documents
+
+**Repeated K-Fold**
+- Run K-fold multiple times
+- More robust estimates
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🎯 Metric Selection Guide
+
+**Choose based on your problem:**
+
+### Imbalanced Classification (e.g., Fraud Detection)
+```
+❌ Accuracy (misleading)
+✅ Precision-Recall AUC
+✅ F1-Score
+✅ Matthews Correlation Coefficient
+```
+
+### Medical Diagnosis (minimize false negatives)
+```
+✅ Recall (catch all positives)  
+✅ F2-Score (weights recall 2×)
+⚠️ Precision (less critical here)
+```
+
+### Spam Detection (minimize false positives)
+```
+✅ Precision (avoid blocking real email)
+✅ F0.5-Score (weights precision 2×)
+⚠️ Recall (some spam OK to miss)
+```
+
+### Regression (House Prices)
+```
+✅ RMSE (penalize big errors)
+✅ MAPE (% errors interpretable)
+❌ MSE (units squared, hard to interpret)
+```
+
+---
+
+## 🛠️ Complete Evaluation Pipeline
+
+```python
+from sklearn.model_selection import cross_validate
+from sklearn.metrics import make_scorer, f1_score, roc_auc_score
+
+# Define multiple metrics
+scoring = {
+    'accuracy': 'accuracy',
+    'precision': 'precision',
+    'recall': 'recall',
+    'f1': 'f1',
+    'roc_auc': 'roc_auc'
+}
+
+# Cross-validate with all metrics
+results = cross_validate(
+    model, X, y,
+    cv=5,
+    scoring=scoring,
+    return_train_score=True
+)
+
+# Analyze
+for metric in scoring:
+    train_mean = results[f'train_{metric}'].mean()
+    test_mean = results[f'test_{metric}'].mean()
+    gap = train_mean - test_mean
+    
+    print(f"{metric}: Train={train_mean:.3f}, Test={test_mean:.3f}, Gap={gap:.3f}")
+    if gap > 0.1:
+        print("⚠️ Overfitting detected!")
+```
+
+---
+
+## 💡 What You'll Master
+
+<table>
+<tr>
+<td width="50%">
+
+### 📊 Classification
+- ✅ Confusion matrix interpretation
+- ✅ Precision vs Recall tradeoff
+- ✅ ROC and PR curves
+- ✅ Multi-class metrics
+- ✅ Imbalanced data handling
+
+</td>
+<td width="50%">
+
+### 📏 Regression
+- ✅ MAE, MSE, RMSE differences
+- ✅ R² interpretation
+- ✅ Residual analysis
+- ✅ Custom metrics
+- ✅ Business-aligned metrics
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🚨 Common Pitfalls
+
+**Avoid these mistakes:**
+
+❌ **Using accuracy on imbalanced data** → 99% "accuracy" predicting all negative  
+❌ **Not using cross-validation** → Overfitting goes undetected  
+❌ **Data leakage in split** → Unrealistic performance estimates  
+❌ **Wrong metric for problem** → Optimizing the wrong objective  
+❌ **Ignoring business context** → Statistically good but business-bad model  
+
+---
+
+<div align="center">
+
+**Measure Right, Build Right** ⚖️
+
+*9 topics • Classification + Regression + Validation*
+
+[⬅️ Unsupervised ML](../04_unsupervised_ml/) • [🏠 Home](../../README.md) • [➡️ Feature Engineering](../06_feature_engineering/)
+
+</div>

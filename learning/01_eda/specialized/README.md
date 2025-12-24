@@ -1,87 +1,72 @@
-# Specialized EDA Techniques
+<div align="center">
 
-This folder contains advanced, domain-specific EDA techniques. These are **optional** and should only be used when working in these specific domains.
+# 🎯 Specialized EDA Techniques
 
----
+### *Domain-Specific Exploratory Analysis*
 
-## 📚 Contents
+![Status](https://img.shields.io/badge/Status-Reference-blue?style=flat-square)
 
-### 1. [Time Series EDA](./01_time_series_eda.md)
-**When:** Stock prices, IoT sensors, sales forecasting
+**Advanced EDA for Time Series, Geospatial, Text, Big Data, and Dashboards**
 
-**Covers:**
-- Stationarity testing (ADF, KPSS)
-- ACF/PACF autocorrelation analysis
-- Seasonal decomposition
-- Rolling statistics
-- Change point detection
+</div>
 
 ---
 
-### 2. [Geospatial EDA](./02_geospatial_eda.md)
-**When:** Delivery optimization, real estate, location-based services
+## 📋 Specialized Domains
 
-**Covers:**
-- Mapping (Plotly, Folium)
-- Geocoding (address ↔ coordinates)
-- Distance calculations (Haversine)
-- Choropleth maps
-- Spatial clustering (DBSCAN)
-- Heatmaps
+<table>
+<tr>
+<td width="50%">
 
----
+### 🕐 Time Series EDA
+- Trend analysis
+- Seasonality detection
+- Stationarity testing
+- Autocorrelation (ACF/PACF)
 
-### 3. [Text/NLP EDA](./03_text_nlp_eda.md)
-**When:** Sentiment analysis, chatbots, document classification
+### 🗺️ Geospatial EDA
+- Map visualizations
+- Spatial clustering
+- Distance calculations
+- Heat maps
 
-**Covers:**
-- Word frequency & stopword removal
-- Word clouds
-- N-gram analysis (bigrams/trigrams)
-- Sentiment distribution
-- Language detection
-- Topic modeling (LDA)
-- Named entity recognition
+### 📝 Text/NLP EDA
+- Covered in [Module 7](../../07_unstructured_data/)
+- See [Text EDA Project](../../../projects/project_text_eda/)
 
----
+</td>
+<td width="50%">
 
-### 4. [Big Data EDA](./04_big_data_eda.md)
-**When:** Datasets > 10GB that don't fit in RAM
-
-**Covers:**
+### 💾 Big Data EDA
 - Sampling strategies
-- Dask (pandas-like for big data)
-- PySpark (distributed computing)
-- Vaex (memory-mapping)
-- Incremental statistics
-- Approximate algorithms (HyperLogLog)
-- Parquet format optimization
+- Distributed computing
+- Apache Spark integration
+- Memory-efficient techniques
+
+### 📊 Interactive Dashboards
+- Streamlit apps
+- Plotly Dash
+- Real-time visualization
+- User-driven exploration
+
+</td>
+</tr>
+</table>
 
 ---
 
-### 5. [Interactive Dashboards](./05_interactive_dashboards.md)
-**When:** Sharing analysis with non-technical stakeholders
+## 🎯 When to Use
 
-**Covers:**
-- Streamlit (fastest to build)
-- Plotly Dash (production-grade)
-- Panel/HoloViz (Jupyter-based)
-- Deployment (Streamlit Cloud, Heroku, Docker)
-- Best practices for dashboards
+**Time Series:** Stock prices, sensor data, forecasting  
+**Geospatial:** Location analysis, delivery optimization  
+**Text:** Already covered in unstructured data module  
+**Big Data:** >100GB datasets, distributed systems  
+**Dashboards:** Stakeholder presentations, interactive reports  
 
 ---
 
-## 🚦 When to Use Each
+<div align="center">
 
-| Domain | Priority | Complexity | Common Industries |
-|--------|----------|------------|-------------------|
-| Time Series | 🟢 Medium | Medium | Finance, IoT, E-commerce |
-| Geospatial | 🟡 Low | High | Logistics, Real Estate, GIS |
-| Text/NLP | 🟢 Medium | Low-Medium | Social Media, Customer Support |
-| Big Data | 🔴 Low | Very High | Tech Giants, Data Warehouses |
-| Dashboards | 🟡 Low | Medium | Any (for stakeholder communication) |
+[⬅️ Back to Main EDA](../)
 
----
-
-## 📝 Note
-These guides assume you've mastered the core EDA concepts in the main module. They build upon that foundation with domain-specific tools and techniques.
+</div>
