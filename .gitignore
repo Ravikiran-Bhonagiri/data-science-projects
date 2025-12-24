@@ -1,3 +1,9 @@
+# Data folders - Exclude all data directories
+data/
+*/data/
+**/data/
+projects/data/
+
 # Python
 __pycache__/
 *.py[cod]
