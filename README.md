@@ -598,6 +598,6 @@ Apply to your own data
 
 ---
 
-**Last Updated:** December 2024 | **Status:** Production-Ready, Interview-Ready | **Rating:** 9/10
+**Last Updated:** December 2025 | **Status:** Production-Ready, Interview-Ready | **Rating:** 9/10
 
 </div>
