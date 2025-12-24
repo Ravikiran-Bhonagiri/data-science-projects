@@ -511,12 +511,41 @@ Week 7-8: Integration & Projects
 
 ---
 
+## 📚 Learning Resources
+
+**This module is project-based. All learning material is integrated into comprehensive projects:**
+
+### 📝 Text/NLP
+**[Text EDA Project](../../projects/project_text_eda/)** - 3 notebooks
+- Notebook 1: Text cleaning, frequency analysis, Zipf's Law
+- Notebook 2: Sentiment analysis, topic modeling (LDA)
+- Notebook 3: Named entity recognition, POS tagging, classification
+
+### 🖼️ Images/Computer Vision
+**[Image EDA Project](../../projects/project_image_eda/)** - 3 notebooks
+- Notebook 1: Eigenfaces, PCA, face reconstruction
+- Notebook 2: Manifold learning, t-SNE visualization
+- Notebook 3: Edge detection, HOG features, dimensionality comparison
+
+### 🎥 Video/Temporal Analysis
+**[Video EDA Project](../../projects/project_video_eda/)** - 2 notebooks
+- Notebook 1: Frame extraction, temporal statistics
+- Notebook 2: Motion detection, temporal dynamics
+
+### 🎬 Complete Overview
+**[Unstructured Data Projects Guide](../../projects/README_UNSTRUCTURED.md)**
+- All 3 domains in one place
+- Technology stack reference
+- Learning path recommendations
+
+---
+
 <div align="center">
 
 **Master Unstructured Data, Unlock 80% of Data** 🎯
 
-*Text, Images, and Video - The Future of Data Science*
+*8 notebooks across 3 projects • Text + Images + Video*
 
-[⬅️ Previous: Feature Engineering](../06_feature_engineering/) • [🏠 Home](../../README.md) • [📊 View Projects](../../projects/)
+[⬅️ Previous: Feature Engineering](../06_feature_engineering/) • [🏠 Home](../../README.md) • [📊 View Projects](../../projects/README_UNSTRUCTURED.md)
 
 </div>
